@@ -1,4 +1,3 @@
-
 # 🎵 Music Player
 
 This is a simple, modern music player built with **HTML5**, **CSS3**, and **JavaScript**.  
