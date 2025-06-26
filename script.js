@@ -7,10 +7,15 @@ const progress = document.getElementById('progress');
 const title = document.getElementById('title');
 const currentTimeEl = document.getElementById('current-time');
 const durationEl = document.getElementById('duration');
+<<<<<<< HEAD
+=======
+const cover = document.getElementById('cover'); // NUEVO
+>>>>>>> 8d5443f (first commit)
 
 const songs = [
   {
     title: "Circa 1983",
+<<<<<<< HEAD
     src: "music/Circa 1983 - Freedom Trail Studio.mp3"
   },
   {
@@ -24,6 +29,25 @@ const songs = [
   {
     title: "They Bop",
     src: "music/They Bop - Freedom Trail Studio.mp3"
+=======
+    src: "music/Circa 1983 - Freedom Trail Studio.mp3",
+    cover: "images/circa1983.jpg"
+  },
+  {
+    title: "Excess",
+    src: "music/Excess - Freedom Trail Studio.mp3",
+    cover: "images/excess.jpg"
+  },
+  {
+    title: "Jumpy Pants",
+    src: "music/Jumpy Pants - Freedom Trail Studio.mp3",
+    cover: "images/jumpypants.jpg"
+  },
+  {
+    title: "They Bop",
+    src: "music/They Bop - Freedom Trail Studio.mp3",
+    cover: "images/theybop.jpg"
+>>>>>>> 8d5443f (first commit)
   },
 ];
 
@@ -32,18 +56,30 @@ let songIndex = 0;
 function loadSong(song) {
   title.textContent = song.title;
   audio.src = song.src;
+<<<<<<< HEAD
+=======
+  cover.src = song.cover; // NUEVO
+>>>>>>> 8d5443f (first commit)
 }
 
 function playSong() {
   audio.play();
   playBtn.textContent = '⏸️';
+<<<<<<< HEAD
   playBtn.classList.add('playing'); // Añadido para animación
+=======
+  playBtn.classList.add('playing');
+>>>>>>> 8d5443f (first commit)
 }
 
 function pauseSong() {
   audio.pause();
   playBtn.textContent = '▶️';
+<<<<<<< HEAD
   playBtn.classList.remove('playing'); // Quitamos animación
+=======
+  playBtn.classList.remove('playing');
+>>>>>>> 8d5443f (first commit)
 }
 
 function togglePlayPause() {
@@ -67,7 +103,11 @@ prevBtn.addEventListener('click', () => {
 
 nextBtn.addEventListener('click', () => {
   songIndex++;
+<<<<<<< HEAD
   if(songIndex > songs.length -1) {
+=======
+  if(songIndex > songs.length - 1) {
+>>>>>>> 8d5443f (first commit)
     songIndex = 0;
   }
   loadSong(songs[songIndex]);
@@ -75,6 +115,7 @@ nextBtn.addEventListener('click', () => {
 });
 
 muteBtn.addEventListener('click', () => {
+<<<<<<< HEAD
   if(audio.muted) {
     audio.muted = false;
     muteBtn.textContent = '🔈';
@@ -82,6 +123,10 @@ muteBtn.addEventListener('click', () => {
     audio.muted = true;
     muteBtn.textContent = '🔇';
   }
+=======
+  audio.muted = !audio.muted;
+  muteBtn.textContent = audio.muted ? '🔇' : '🔈';
+>>>>>>> 8d5443f (first commit)
 });
 
 audio.addEventListener('timeupdate', () => {
@@ -89,7 +134,10 @@ audio.addEventListener('timeupdate', () => {
     const progressPercent = (audio.currentTime / audio.duration) * 100;
     progress.value = progressPercent;
 
+<<<<<<< HEAD
     // Actualizar tiempo actual y duración
+=======
+>>>>>>> 8d5443f (first commit)
     currentTimeEl.textContent = formatTime(audio.currentTime);
     durationEl.textContent = formatTime(audio.duration);
   }
@@ -111,5 +159,8 @@ function formatTime(seconds) {
   return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
 }
 
+<<<<<<< HEAD
 // Cargar la primera canción al iniciar
+=======
+>>>>>>> 8d5443f (first commit)
 loadSong(songs[songIndex]);
