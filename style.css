@@ -1,0 +1,137 @@
+/* Estilos base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #bc89fe 0%, #9c66ff 100%);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.player {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  padding: 30px;
+  width: 350px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animación de fondo sutil */
+@keyframes backgroundPulse {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.player::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(270deg, #bc89fe, #9c66ff, #bc89fe);
+  background-size: 400% 400%;
+  animation: backgroundPulse 10s ease infinite;
+  opacity: 0.1;
+  z-index: 0;
+  border-radius: 12px;
+}
+
+.player > * {
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.info {
+  margin-bottom: 15px;
+}
+
+#title {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #4b2e83;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.time {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+#progress {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 15px 0;
+  cursor: pointer;
+  height: 8px;
+  border-radius: 5px;
+  background: #ddd;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+#progress:hover {
+  background: #c2a1f9;
+}
+
+#progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #5a2a82;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 0 8px #7b4ca1;
+  transition: background-color 0.3s ease;
+}
+
+#progress::-webkit-slider-thumb:hover {
+  background-color: #7b4ca1;
+}
+
+/* Botones */
+
+.controls button:hover {
+  background: #7b4ca1;
+  box-shadow: 0 6px 15px rgba(123, 76, 161, 0.9);
+  transform: scale(1.1);
+}
+
+.controls button:active {
+  transform: scale(0.9);
+}
+
+/* Animación pulso en play */
+.controls button.playing {
+  animation: pulse 1.6s infinite;
+  box-shadow: 0 0 18px 5px #7b4ca1;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 18px 5px #7b4ca1;
+  }
+  50% {
+    transform: scale(1.15);
+    box-shadow: 0 0 30px 10px #a58ae6;
+  }
+}
