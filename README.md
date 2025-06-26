@@ -1,6 +1,6 @@
 # 🎵 Music Player
 
-This is a simple, modern music player built with **HTML5**, **CSS3**, and **JavaScript**.  
+This is a simple, modern music player. 
 It includes basic audio functionality and allows you to play multiple tracks, view progress, switch songs, and display album artwork dynamically.
 
 ## ✨ Features
