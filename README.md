@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-# Music-Player
-=======
+
 # 🎵 Music Player
 
 This is a simple, modern music player built with **HTML5**, **CSS3**, and **JavaScript**.  
@@ -16,8 +14,13 @@ It includes basic audio functionality and allows you to play multiple tracks, vi
 - 📱 Responsive and clean UI
 - ⚡ Smooth transitions and animations
 
-🌐 Live Demo  
+
+
+🌐 Link to Website
+
 https://mariaromerof.github.io/Music-Player/
+
+📸 Live Demo  
 
 ![Music Player Preview](images/GIF.gif)
 
@@ -32,4 +35,3 @@ https://mariaromerof.github.io/Music-Player/
 ---
 
 Feel free to explore, use, or improve this project. 😊
->>>>>>> 8d5443f (first commit)
