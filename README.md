@@ -17,7 +17,7 @@ It includes basic audio functionality and allows you to play multiple tracks, vi
 - ⚡ Smooth transitions and animations
 
 🌐 Live Demo  
-(https://mariaromerof.github.io/Music-Player/)
+https://mariaromerof.github.io/Music-Player/
 
 ![Music Player Preview](images/GIF.gif)
 
